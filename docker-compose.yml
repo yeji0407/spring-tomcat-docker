@@ -4,9 +4,16 @@ services :
         build: ./web
         ports:
             - "8081:8080"
+        volumes:
+            - ./web/logs:/usr/local/tomcat/logs
     db:
         image: postgres:12.6
         environment:
             POSTGRES_USER : postgres
             POSTGRES_PASSWORD : 1234
             POSTGRES_DB : test
+        volumes:
+            - psql-data:/var/lib/postgresql/data
+
+volumes:
+    psql-data:
