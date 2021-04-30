@@ -1,6 +1,0 @@
-FROM postgres:12.6
-MAINTAINER yejisoft@gmail.com
-
-ENV POSTGRES_USER postgres
-ENV POSTGRES_PASSWORD 1234
-ENV POSTGRES_DB test
